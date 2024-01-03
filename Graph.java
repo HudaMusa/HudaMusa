@@ -75,11 +75,8 @@ public class Graph {
 	public boolean existsNode(Node t) // check if node exists
 	{
 		Boolean exists = false;
-		
-		for (int i = 0; i < node.size(); i++) {
-	        if (node.get(i).getName().equals(t.getName()) || (node.get(i).getLat() == t.getLat() && node.get(i).getLon() == t.getLon())) {//check lat, lon or name duplication 
+		if (node.contains(t)) {
 			exists = true;
-		}
 		}
 		return exists;
 	}
@@ -120,12 +117,12 @@ public class Graph {
 	    for (int i = 0; i < node.size(); i++) {
 	        while (node.get(i).getName().equals(t.getName()) || (node.get(i).getLat() == t.getLat() && node.get(i).getLon() == t.getLon())) {
 	            System.out.println("ERROR: City name and/or coordinates already exist!");
-	            System.out.print("\nCity " + i + ":");
+	            System.out.print("\nCity " + Pro3_musahuda.numOfCities + ":");
 	            System.out.print("\n   Name: ");
 	            try {
-	                String name = Pro4_musahuda.cin.readLine();
-		            double lat = Pro4_musahuda.getDouble("   latitude: ", -90, 90);
-		            double lon = Pro4_musahuda.getDouble("   longitude: ", -180, 180);
+	                String name = Pro3_musahuda.cin.readLine();
+		            double lat = Pro3_musahuda.getDouble("   latitude: ", -90, 90);
+		            double lon = Pro3_musahuda.getDouble("   longitude: ", -180, 180);
 		            t = new Node(name, lat, lon);
 	            } catch (IOException e) {
 	                e.printStackTrace();
