@@ -45,15 +45,15 @@ public class Node {
 		//name = this.getName();
 		try {
 			System.out.print("   Name: ");
-			name = Pro5_musahuda.cin.readLine();
+			name = Pro4_musahuda.cin.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} //do not need to check validity + call getString function
 		lat = this.getLat();
-		lat = Pro5_musahuda.getDouble("   latitude: ",-90,90);
+		lat = Pro4_musahuda.getDouble("   latitude: ",-90,90);
 		lon = this.getLon();
-		lon = Pro5_musahuda.getDouble("   longitude: ", -180,180);
+		lon = Pro4_musahuda.getDouble("   longitude: ", -180,180);
 		
 	}
 	public void print() // print node info as a table row

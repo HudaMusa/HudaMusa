@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.*;
 import java.io.*;
@@ -75,7 +74,7 @@ public class Graph {
 	}
 	public boolean existsNode(Node t) // check if node exists
 	{
-		boolean exists = false;
+		Boolean exists = false;
 		
 		for (int i = 0; i < node.size(); i++) {
 	        if (node.get(i).getName().equals(t.getName()) || (node.get(i).getLat() == t.getLat() && node.get(i).getLon() == t.getLon())) {//check lat, lon or name duplication 
@@ -103,7 +102,7 @@ public class Graph {
 	    for (int i = 0; i < node.size(); i++) {
 	        for (int j = i + 1; j < node.size(); j++) {
 	            if (A[i][j] == true) {
-	                counter += 1; // or counter = counter + 1;
+	                counter += 1;
 	                if (counter == k) {
 	                    A[i][j] = false;
 	                    A[j][i] = false;
@@ -124,9 +123,9 @@ public class Graph {
 	            System.out.print("\nCity " + i + ":");
 	            System.out.print("\n   Name: ");
 	            try {
-	                String name = Pro5_musahuda.cin.readLine();
-		            double lat = Pro5_musahuda.getDouble("   latitude: ", -90, 90);
-		            double lon = Pro5_musahuda.getDouble("   longitude: ", -180, 180);
+	                String name = Pro4_musahuda.cin.readLine();
+		            double lat = Pro4_musahuda.getDouble("   latitude: ", -90, 90);
+		            double lon = Pro4_musahuda.getDouble("   longitude: ", -180, 180);
 		            t = new Node(name, lat, lon);
 	            } catch (IOException e) {
 	                e.printStackTrace();
